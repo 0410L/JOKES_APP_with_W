@@ -1,69 +1,76 @@
-*{
+/*{
     text-align: center;
     justify-items: center;
+    margin: auto;
 }
+*/
 
 body {
-    align-items: center;
-    margin: 100px;
-    margin-top: 300px;
     font-family: Arial, Helvetica, sans-serif, 'Arial Narrow Bold', sans-serif;
     font-size: medium;
+    
 
 }
+/*
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+*/
 
-.center {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-  }
+.btn {
+    font-style:italic;
+}
 
 button {
     align-self: center;
     cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    padding: 30px;
-    background-color: rgb(3, 0, 199);
     color: white;
     cursor: pointer;
-    font-size: xx-large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-button:hover {
+.button:hover {
     background-color: rgb(162, 199, 0);
     transition: 0.3s;
 }
 
-button:active {
+.button:active {
     background:rgb(255, 0, 0);
 }
 
+/*
+col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+  }
+  */
 
-.parking {
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 3rem;
-    text-align: justify;
-}
-
-.contenedor {
+.container {
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
     border-radius: 20px;
+    
 }
 
+/*
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+*/
+
 p {
-    margin-bottom: 100px;
-    font-size: xx-large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
 }
 
 
@@ -178,6 +185,8 @@ p {
 width: 95%;opacity: 0;
 }
 }
+
+
 
 /*
 font: https://codepen.io/ahse/pen/GpRbEr
