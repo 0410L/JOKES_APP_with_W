@@ -1,8 +1,8 @@
 //escriure aqui per conversió a js
 var button = document.querySelector('.contenedor button');
 var textAcudit = document.querySelector('.contenedor p');
-document.addEventListener('DOMContentLoaded', getJoke);
-var nextAcudit = document.getElementById('nextAcudit');
+//function getJoke (null){}
+window.stop();
 function getJoke() {
     fetch('https://icanhazdadjoke.com/', {
         headers: {
@@ -12,6 +12,7 @@ function getJoke() {
         .then(function (data) { return data.json(); })
         .then(function (obj) { return textAcudit.innerHTML = obj.joke; });
 }
+document.addEventListener('DOMContentLoaded', getJoke);
 /*
 //escribir variable en typescript
 let text: string = "texto";

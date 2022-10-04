@@ -4,10 +4,8 @@ const button = document.querySelector('.contenedor button');
 
 const textAcudit = document.querySelector('.contenedor p');
 
-document.addEventListener('DOMContentLoaded', getJoke);
-
-const nextAcudit = document.getElementById('nextAcudit');
-
+//function getJoke (null){}
+window.stop();
 function getJoke() {
     fetch('https://icanhazdadjoke.com/', {
         headers: {
@@ -17,6 +15,12 @@ function getJoke() {
     .then(data => data.json())
         .then(obj => textAcudit.innerHTML = obj.joke)
 }
+
+document.addEventListener('DOMContentLoaded', getJoke);
+
+
+
+
 
 
 /*
