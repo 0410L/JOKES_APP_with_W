@@ -57,14 +57,14 @@ col {
     
 }
 
-/*
+
 .contenedor{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
 }
-*/
+
 
 p {
     font-size: large;
@@ -78,7 +78,7 @@ p {
 
 /*
 #light{
-    position: relative;
+    position: absolute;
     top: 150px;
 }
 #lineh1{
