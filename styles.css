@@ -190,3 +190,13 @@ width: 95%;opacity: 0;
 /*
 font: https://codepen.io/ahse/pen/GpRbEr
 */
+
+
+@media (max-width: 600px) {
+    *{
+        font-size: small;
+        margin: 0 pix;
+  }
+  p {
+    font-size: smaller;
+}
