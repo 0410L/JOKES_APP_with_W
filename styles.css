@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
+    font-size: x-large;
     
 
 }
@@ -27,7 +27,11 @@ body {
 button {
     align-self: center;
     cursor: pointer;
-    color: white;
+    border: none;
+    font-size: xx-large;
+    color: red;
+    background-color: transparent;
+
 }
 
 .button:hover {
@@ -74,7 +78,7 @@ div {
 
 
 p {
-    font-size: large;
+    font-size: x-large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: auto;
 }
@@ -208,6 +212,7 @@ font: https://codepen.io/ahse/pen/GpRbEr
   p {
     font-size: small;
 }
+
 
 @media (max-width: 635px) {
   h1 {

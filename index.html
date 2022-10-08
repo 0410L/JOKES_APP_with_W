@@ -1,76 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Oriol Busquet - Sprint 5</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </head>
-    <h5 class="container" style="margin: left 10px; position: absolute;">Avui: parcialment ennuvolat</h5>
-    <body>
-      <style>
-        body {
-          background-image: url();
-          background-attachment: cover;
-          background-repeat:no-repeat;
-          background-size:100% 100%;
-        }
-        </style>
-	<div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh; overflow:hidden">
-		<!-- Inner row, half the width and height, centered, blue border -->
-		<div class="row text-center d-flex align-items-center" style="overflow:hidden; width:50vw">
-      <section>
-        <div class="container border border-light rounded shadow p-3 mb-5 bg-white">
-          <div class="col">
-            <h3>🤣 Preparat per riure? 🤣​</h3><br>
-            <p>
-            </p>
-            <br><button id="nextAcudit" class= "btn btn-primary" onclick="getJoke()">Següent acudit</button>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Oriol Busquet - Sprint 5</title>
+          <link rel="stylesheet" href="styles.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          <script src="https://kit.fontawesome.com/5132602d67.js" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      </head>
+      <h5 class="container" style="margin: left 10px; position: absolute;">Avui: parcialment ennuvolat</h5>
+      <body>
+            <style>
+              body {
+                background-image: url();
+                background-attachment: cover;
+                background-repeat:no-repeat;
+                background-size:100% 100%;
+              }
+              </style>
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh; overflow:hidden">
+          <!-- Inner row, half the width and height, centered, blue border -->
+          <div class="row text-center d-flex align-items-center" style="overflow:hidden; width:50vw">
+            <section>
+              <div class="container opacity-0">
+                <div class="col">
+                  <h3>🤣 Preparat per riure? 🤣​</h3><br>
+                  <div class="Joke">
+                    <p>
+                    </p>
+                    <div class="score">
+                      <button type="button" id="button1" onclick="addToList(1)" hidden><i class="btn btn-success btn-lg fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;" aria-hidden="true"></i></button>
+                      <button type="button" id="button2" onclick="addToList(2)" hidden><i class="btn btn-warning btn-lg fa-solid fa-heart-circle-exclamation fa-beat" aria-hidden="true"></i></button>
+                      <button type="button" id="button3" onclick="addToList(3)" hidden><i class="btn btn-danger btn-lg fa-solid fa-heart-crack fa-beat" style="--fa-animation-duration: 2s;" aria-hidden="true"></i></button>
+                    </div>
+                  </div>    
+                </div>
+                <button id="nextAcudit" class= "btn btn-primary" onclick="aleatorio()">Següent acudit</button>
+              </div> 
+            </section>
+            <script src="main.js"></script>
+          </div> <!-- Inner row -->
+        </div> <!-- Outer container -->
 
-          </div>    
-          <script src="main.js"></script>
+
+
+            <!--  <div class="container">
 
           
-
-      </section>
-
-		</div> <!-- Inner row -->
-	</div> <!-- Outer container -->
-
-
-
-      <!--  <div class="container">
-
-     
-      <div class="d-flex align-items-center justify-content-center" style="height: 350px">
-        <div class="p-2 bd-highlight col-example">Flex item</div>
-        <div class="p-2 bd-highlight col-example">Flex item</div>
-        <div class="p-2 bd-highlight col-example">Flex item</div>
-      </div>
+            <div class="d-flex align-items-center justify-content-center" style="height: 350px">
+              <div class="p-2 bd-highlight col-example">Flex item</div>
+              <div class="p-2 bd-highlight col-example">Flex item</div>
+              <div class="p-2 bd-highlight col-example">Flex item</div>
+            </div>
 
 
-      </div>-->
+            </div>-->
 
 
-    </body>
+      </body>
+  </html>
+
+
+
+  <!--      <div id="light"></div>
+            <div id="lineh1"></div>
+            <div id="lineh2"></div>
+            <div id="lineh3"></div>
+            <div id="lineh4"></div>
+            <div id="lineh5"></div>
+            <div id="lineh6"></div>
+            <div id="lineh7"></div>
+            <div id="lineh8"></div>
+            <div id="lineh9"></div>
+            <div id="lineh10"></div>
+            <div id="lineh11"></div>
+            <div id="lineh12"></div>
+  -->
 </html>
 
-
-
-<!--      <div id="light"></div>
-		      <div id="lineh1"></div>
-          <div id="lineh2"></div>
-          <div id="lineh3"></div>
-          <div id="lineh4"></div>
-          <div id="lineh5"></div>
-          <div id="lineh6"></div>
-          <div id="lineh7"></div>
-          <div id="lineh8"></div>
-          <div id="lineh9"></div>
-          <div id="lineh10"></div>
-          <div id="lineh11"></div>
-          <div id="lineh12"></div>
--->
+<!--source : https://cdnjs.com/libraries/font-awesome -->
