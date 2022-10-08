@@ -1,8 +1,10 @@
 //escriure aqui per conversió a js
-var button = document.querySelector('.contenedor button');
-var textAcudit = document.querySelector('.contenedor p');
+var button = document.querySelector('.container button');
+var textAcudit = document.querySelector('.container p');
+var dia = actual;
+var puntuacionChiste = [];
 //function getJoke (null){}
-window.stop();
+//window.stop();
 function getJoke() {
     fetch('https://icanhazdadjoke.com/', {
         headers: {
@@ -12,7 +14,28 @@ function getJoke() {
         .then(function (data) { return data.json(); })
         .then(function (obj) { return textAcudit.innerHTML = obj.joke; });
 }
-document.addEventListener('DOMContentLoaded', getJoke);
+function addToList(score) {
+    var reportJokes = {};
+    reportJokes.joke = textAcudit.innerHTML;
+    resume.push(reportJokes);
+    reportJokes.date = actual().toISOString();
+    reportJokes.score = score;
+    console.log(reportJokes);
+}
+/*function addToList(){
+    let reportJokes {
+    resume.push(reportJokes)
+    reportJokes.joke = textAcudit.innerHTML
+    reportJokes.date = actual().toISOString()
+    reportJokes.score = score;
+    }
+}
+
+
+
+
+
+
 /*
 //escribir variable en typescript
 let text: string = "texto";

@@ -1,11 +1,12 @@
 //escriure aqui per conversió a js
 
-const button = document.querySelector('.contenedor button');
-
-const textAcudit = document.querySelector('.contenedor p');
+const button = document.querySelector('.container button');
+const textAcudit = document.querySelector('.container p');
+const dia = actual;
+const puntuacionChiste = []
 
 //function getJoke (null){}
-window.stop();
+//window.stop();
 function getJoke() {
     fetch('https://icanhazdadjoke.com/', {
         headers: {
@@ -16,7 +17,24 @@ function getJoke() {
         .then(obj => textAcudit.innerHTML = obj.joke)
 }
 
-document.addEventListener('DOMContentLoaded', getJoke);
+function addToList(score){
+    const reportJokes = {}
+    reportJokes.joke = textAcudit.innerHTML
+    resume.push(reportJokes)
+    reportJokes.date = actual().toISOString()
+    reportJokes.score = score;
+    console.log(reportJokes)
+}
+
+
+/*function addToList(){
+    let reportJokes {
+    resume.push(reportJokes)
+    reportJokes.joke = textAcudit.innerHTML
+    reportJokes.date = actual().toISOString()
+    reportJokes.score = score;
+    }
+}
 
 
 
