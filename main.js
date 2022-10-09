@@ -25,22 +25,17 @@ function addToList(score) {
     puntuacionChiste.push(reportJokes);
     console.log(puntuacionChiste);
 }
-//// generador d'acudits desde API EXTERNA
+//// generador del temps desde API EXTERNA
 function justWeather() {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=14f15cb2967f0ebbd8cde2cc84211707', {
         headers: {
             'Accept': 'application/json'
         }
     });
-    //.then(data => data.json())
-    //.then(obj => textAcudit.innerHTML = obj.joke)
-    //.then(wheaterData => wheaterData.json())
-    //.then(weatherObj => wheatherLog.innerHTML = weatherObj.weather)
-    //
     var weatherObj = wheaterData();
-    var temp = weatherObj['weather'].map(function (weather) { return weather.iconoTiempo; });
-    var iconoTiempo = ('http://openweathermap.org/img/wm/' + temp + "@2x.png");
-    weatherLog.innerHTML = ("<img src = " + iconoTiempo + ">");
+    var temp = weatherObj['weather'].map(function (weather) { return weather.icon; });
+    var icon = ('http://openweathermap.org/img/wm/' + temp + "@2x.png");
+    weatherLog.innerHTML = ("<img src = " + icon + ">");
     celsius.innerHTML = weatherObj.main.temp + ("ºC");
 }
 //// generador d'acudits CHUCK NORRIS desde API EXTERNA
@@ -61,6 +56,7 @@ function votacion() {
     document.getElementById("button-1").hidden = false;
     document.getElementById("button-2").hidden = false;
     document.getElementById("button-3").hidden = false;
+    fondos();
     if (random() == 0) {
         justJoke();
     }
@@ -70,6 +66,26 @@ function votacion() {
     //justJoke();
     //justJokeNorris();
 }
+function fondos() {
+    var shapes = ['blob-1.svg', 'blob-2.svg', 'blob-3.svg', 'blob-4.svg', 'blob-5.svg',];
+    var randomShapes = shapes[Math.floor(Math.random() * shapes.length)];
+    document.body.style.backgroundImage = ("url(images/" + (randomShapes) + ")");
+}
+/*
+const image = 5;
+
+$(document).ready(function () {
+  let current = 0;
+  $(".image").on("click", function () {
+    $(".image").css({ 'background-image': `url(${++current % image + 1}.svg)` });
+  });
+});
+/*
+
+
+
+
+
 /*
     //escribir variable en typescript
     let text: string = "texto";

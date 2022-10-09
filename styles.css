@@ -12,9 +12,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif, 'Arial Narrow Bold', sans-serif;
     font-size: x-large;
-    
 
 }
+
+.image{
+    position: absolute;
+    background-image: url ("blob-1.svg",);
+    background-size: cover;
+ }
+
+
 /*
 .row {
     display: flex;
