@@ -31,17 +31,17 @@ function justWeather() {
         headers: {
             'Accept': 'application/json'
         }
-    })
-        .then(function (data) { return data.json(); })
-        .then(function (obj) { return textAcudit.innerHTML = obj.joke; });
+    });
+    //.then(data => data.json())
+    //.then(obj => textAcudit.innerHTML = obj.joke)
     //.then(wheaterData => wheaterData.json())
     //.then(weatherObj => wheatherLog.innerHTML = weatherObj.weather)
     //
-    /*const weatherObj = wheaterData();
-    const temporal = weatherObj['weather'].map(weather);
-    var iconitoTiempo = ('http://openweathermap.org/img/wm/' + temporal + "@2x.png");
-    weatherLog.innerHTML = ("<img src = " + iconitoTiempo + ">");
-    celsius.innerHTML = weatherObj.main.temporal + ("ºC");*/
+    var weatherObj = wheaterData();
+    var temp = weatherObj['weather'].map(function (weather) { return weather.iconoTiempo; });
+    var iconoTiempo = ('http://openweathermap.org/img/wm/' + temp + "@2x.png");
+    weatherLog.innerHTML = ("<img src = " + iconoTiempo + ">");
+    celsius.innerHTML = weatherObj.main.temp + ("ºC");
 }
 //// generador d'acudits CHUCK NORRIS desde API EXTERNA
 function justJokeNorris() {
@@ -53,12 +53,22 @@ function justJokeNorris() {
         .then(function (dataNorris) { return dataNorris.json(); })
         .then(function (objNorris) { return textAcudit.innerHTML = objNorris.value; });
 }
+function random() {
+    var number = [0, 1];
+    return Math.round(Math.random(number));
+}
 function votacion() {
     document.getElementById("button-1").hidden = false;
     document.getElementById("button-2").hidden = false;
     document.getElementById("button-3").hidden = false;
-    justJoke();
-    justJokeNorris();
+    if (random() == 0) {
+        justJoke();
+    }
+    else {
+        justJokeNorris();
+    }
+    //justJoke();
+    //justJokeNorris();
 }
 /*
     //escribir variable en typescript
