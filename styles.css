@@ -5,6 +5,10 @@
 }
 */
 
+*{
+    font-size: large;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif, 'Arial Narrow Bold', sans-serif;
     font-size: x-large;
@@ -43,20 +47,19 @@ button {
     background:rgb(255, 0, 0);
 }
 
-/*
-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.weather {
+    align-items: start;
+    justify-content: start;
     width: 50%;
     margin: auto;
+    font-size: larger;
+    
   }
-  */
 
 .container {
     width: 100%;
     max-width: 400px;
-    padding: 1rem;
+    padding: 0rem;
     
 }
 
@@ -204,7 +207,7 @@ font: https://codepen.io/ahse/pen/GpRbEr
 
 
 
-@media (max-width: 772px) {
+@media (max-width: 800px) {
     *{
         font-size: smaller;
         margin: 0 pix;

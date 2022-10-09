@@ -3,9 +3,11 @@ var textAcudit = document.querySelector('.container p');
 var button = document.querySelector('.container button');
 var arxiu = new Date;
 var puntuacionChiste = [];
-//function getJoke (null){}
+var weatherLog = document.querySelector('.weather p');
+var celsius = document.querySelector('.weather h4');
+//// generador d'acudits desde API EXTERNA
 //window.stop();
-function getJoke() {
+function justJoke() {
     fetch('https://icanhazdadjoke.com/', {
         headers: {
             'Accept': 'application/json'
@@ -14,6 +16,7 @@ function getJoke() {
         .then(function (data) { return data.json(); })
         .then(function (obj) { return textAcudit.innerHTML = obj.joke; });
 }
+//// marcador de puntuació d'acudits
 function addToList(score) {
     var reportJokes = {};
     reportJokes.joke = textAcudit.innerHTML;
@@ -22,19 +25,40 @@ function addToList(score) {
     puntuacionChiste.push(reportJokes);
     console.log(puntuacionChiste);
 }
-/*function addToList(){
-    let reportJokes {
-    resume.push(reportJokes)
-    reportJokes.joke = textAcudit.innerHTML
-    reportJokes.date = actual().toISOString()
-    reportJokes.score = score;
-    }
-}*/
-function aleatorio() {
-    document.getElementById("button1").hidden = false;
-    document.getElementById("button2").hidden = false;
-    document.getElementById("button3").hidden = false;
-    getJoke();
+//// generador d'acudits desde API EXTERNA
+function justWeather() {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=14f15cb2967f0ebbd8cde2cc84211707', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+        .then(function (data) { return data.json(); })
+        .then(function (obj) { return textAcudit.innerHTML = obj.joke; });
+    //.then(wheaterData => wheaterData.json())
+    //.then(weatherObj => wheatherLog.innerHTML = weatherObj.weather)
+    //
+    /*const weatherObj = wheaterData();
+    const temporal = weatherObj['weather'].map(weather);
+    var iconitoTiempo = ('http://openweathermap.org/img/wm/' + temporal + "@2x.png");
+    weatherLog.innerHTML = ("<img src = " + iconitoTiempo + ">");
+    celsius.innerHTML = weatherObj.main.temporal + ("ºC");*/
+}
+//// generador d'acudits CHUCK NORRIS desde API EXTERNA
+function justJokeNorris() {
+    fetch('https://api.chucknorris.io/jokes/random', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+        .then(function (dataNorris) { return dataNorris.json(); })
+        .then(function (objNorris) { return textAcudit.innerHTML = objNorris.value; });
+}
+function votacion() {
+    document.getElementById("button-1").hidden = false;
+    document.getElementById("button-2").hidden = false;
+    document.getElementById("button-3").hidden = false;
+    justJoke();
+    justJokeNorris();
 }
 /*
     //escribir variable en typescript

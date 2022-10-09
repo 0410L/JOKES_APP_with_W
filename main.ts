@@ -1,22 +1,25 @@
 //escriure aqui per conversió a js
-
 const textAcudit = document.querySelector('.container p');
 const button = document.querySelector('.container button');
 const arxiu = new Date;
 const puntuacionChiste = []
+const weatherLog = document.querySelector('.weather p')
+const celsius = document.querySelector('.weather h4')
 
-//function getJoke (null){}
+
+//// generador d'acudits desde API EXTERNA
+
 //window.stop();
-function getJoke() {
+function justJoke() {
     fetch('https://icanhazdadjoke.com/', {
         headers: {
             'Accept': 'application/json'
         }
     })
     .then(data => data.json())
-        .then(obj => textAcudit.innerHTML = obj.joke)
+    .then(obj => textAcudit.innerHTML = obj.joke)
 }
-
+//// marcador de puntuació d'acudits
 function addToList(score){
     const reportJokes = {}
     reportJokes.joke = textAcudit.innerHTML
@@ -25,22 +28,45 @@ function addToList(score){
     puntuacionChiste.push(reportJokes)
     console.log(puntuacionChiste)
 }
+//// generador d'acudits desde API EXTERNA
+function justWeather() {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=14f15cb2967f0ebbd8cde2cc84211707', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(data => data.json())
+    .then(obj => textAcudit.innerHTML = obj.joke)
+
+    //.then(wheaterData => wheaterData.json())
+    //.then(weatherObj => wheatherLog.innerHTML = weatherObj.weather)
+    //
+    /*const weatherObj = wheaterData();
+    const temporal = weatherObj['weather'].map(weather);
+    var iconitoTiempo = ('http://openweathermap.org/img/wm/' + temporal + "@2x.png");
+    weatherLog.innerHTML = ("<img src = " + iconitoTiempo + ">");
+    celsius.innerHTML = weatherObj.main.temporal + ("ºC");*/
+
+}
+//// generador d'acudits CHUCK NORRIS desde API EXTERNA
+
+function justJokeNorris() {
+    fetch('https://api.chucknorris.io/jokes/random', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(dataNorris => dataNorris.json())
+    .then(objNorris => textAcudit.innerHTML = objNorris.value)
+}
 
 
-/*function addToList(){
-    let reportJokes {
-    resume.push(reportJokes)
-    reportJokes.joke = textAcudit.innerHTML
-    reportJokes.date = actual().toISOString()
-    reportJokes.score = score;
-    }
-}*/
-
-function aleatorio(){
-    document.getElementById("button1").hidden = false;
-    document.getElementById("button2").hidden = false;
-    document.getElementById("button3").hidden = false;
-    getJoke();
+function votacion(){
+    document.getElementById("button-1").hidden = false;
+    document.getElementById("button-2").hidden = false;
+    document.getElementById("button-3").hidden = false;
+    justJoke();
+    justJokeNorris();
 
 }
 

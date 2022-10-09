@@ -11,8 +11,13 @@
           <script src="https://kit.fontawesome.com/5132602d67.js" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       </head>
-      <h5 class="container" style="margin: left 10px; position: absolute;">Avui: parcialment ennuvolat</h5>
       <body>
+        <div class="container fs-4" onload="justWheater()" id="weather" style="position: absolute;">⛅22º</div>
+          <p>
+          </p>
+          <h4>
+          </h4>
+        </div>
             <style>
               body {
                 background-image: url();
@@ -32,13 +37,13 @@
                     <p>
                     </p>
                     <div class="score">
-                      <button type="button" id="button1" onclick="addToList(1)" hidden><i class="btn btn-success btn-lg fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;" aria-hidden="true"></i></button>
-                      <button type="button" id="button2" onclick="addToList(2)" hidden><i class="btn btn-warning btn-lg fa-solid fa-heart-circle-exclamation fa-beat" aria-hidden="true"></i></button>
-                      <button type="button" id="button3" onclick="addToList(3)" hidden><i class="btn btn-danger btn-lg fa-solid fa-heart-crack fa-beat" style="--fa-animation-duration: 2s;" aria-hidden="true"></i></button>
+                      <button type="button" id="button-1" onclick="addToList(1),votacion()" hidden><i class="btn btn-success btn-lg fa-solid fa-heart fa-beat bd-highlight" style="--fa-animation-duration: 0.5s;" aria-hidden="true"></i></button>
+                      <button type="button" id="button-2" onclick="addToList(2),votacion()" hidden><i class="btn btn-warning btn-lg fa-solid fa-heart-circle-exclamation fa-beat" aria-hidden="true"></i></button>
+                      <button type="button" id="button-3" onclick="addToList(3),votacion()" hidden><i class="btn btn-danger btn-lg fa-solid fa-heart-crack fa-beat" style="--fa-animation-duration: 2s;" aria-hidden="true"></i></button>
                     </div>
                   </div>    
                 </div>
-                <button id="nextAcudit" class= "btn btn-primary" onclick="aleatorio()">Següent acudit</button>
+                <button id="nextAcudit" class= "btn btn-primary" onclick="votacion()">Següent acudit</button>
               </div> 
             </section>
             <script src="main.js"></script>
