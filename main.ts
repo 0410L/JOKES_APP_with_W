@@ -3,7 +3,7 @@ const textAcudit = document.querySelector('.container p');
 const button = document.querySelector('.container button');
 const arxiu = new Date;
 const puntuacionChiste = []
-const weatherLog = document.querySelector('.weather p')
+const weatherLog = document.querySelector('.weather h3')
 const celsius = document.querySelector('.weather h4')
 
 

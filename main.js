@@ -3,7 +3,7 @@ var textAcudit = document.querySelector('.container p');
 var button = document.querySelector('.container button');
 var arxiu = new Date;
 var puntuacionChiste = [];
-var weatherLog = document.querySelector('.weather p');
+var weatherLog = document.querySelector('.weather h3');
 var celsius = document.querySelector('.weather h4');
 //// generador d'acudits desde API EXTERNA
 //window.stop();
