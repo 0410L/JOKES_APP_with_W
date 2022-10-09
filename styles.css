@@ -7,6 +7,7 @@
 
 *{
     font-size: large;
+    box-sizing: 0;
 }
 
 body {
@@ -211,7 +212,7 @@ font: https://codepen.io/ahse/pen/GpRbEr
 */
 
 
-
+/*
 @media (max-width: 800px) {
     *{
         font-size: smaller;
@@ -228,3 +229,4 @@ font: https://codepen.io/ahse/pen/GpRbEr
         margin: 0 pix;
     }
 }
+/*
