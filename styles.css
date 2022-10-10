@@ -8,6 +8,7 @@
 *{
     font-size: large;
     box-sizing: 0;
+    overflow: hidden
 }
 
 body {

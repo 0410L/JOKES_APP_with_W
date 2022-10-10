@@ -1,20 +1,18 @@
 //escriure aqui per conversió a js
+var puntuacionChiste = [];
+var arxiu = new Date;
 var textAcudit = document.querySelector('.container p');
 var button = document.querySelector('.container button');
-var arxiu = new Date;
-var puntuacionChiste = [];
 var weatherLog = document.querySelector('.weather h3');
 var celsius = document.querySelector('.weather h4');
 //// generador d'acudits desde API EXTERNA
 //window.stop();
 function justJoke() {
     fetch('https://icanhazdadjoke.com/', {
-        headers: {
-            'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
     })
         .then(function (data) { return data.json(); })
-        .then(function (obj) { return textAcudit.innerHTML = obj.joke; });
+        .then(function (box) { return textAcudit.innerHTML = box.joke; });
 }
 //// marcador de puntuació d'acudits
 function addToList(score) {
@@ -28,34 +26,32 @@ function addToList(score) {
 //// generador del temps desde API EXTERNA
 function justWeather() {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=14f15cb2967f0ebbd8cde2cc84211707', {
-        headers: {
-            'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
     });
-    var weatherObj = wheaterData();
-    var temp = weatherObj['weather'].map(function (weather) { return weather.icon; });
+    var boxWeather = wheaterData();
+    var temp = boxWeather['weather'].map(function (weather) { return weather.icon; });
     var icon = ('http://openweathermap.org/img/wm/' + temp + "@2x.png");
     weatherLog.innerHTML = ("<img src = " + icon + ">");
-    celsius.innerHTML = weatherObj.main.temp + ("ºC");
+    celsius.innerHTML = boxWeather.main.temp + ("ºC");
 }
 //// generador d'acudits CHUCK NORRIS desde API EXTERNA
 function justJokeNorris() {
     fetch('https://api.chucknorris.io/jokes/random', {
-        headers: {
-            'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
     })
         .then(function (dataNorris) { return dataNorris.json(); })
-        .then(function (objNorris) { return textAcudit.innerHTML = objNorris.value; });
+        .then(function (boxNorris) { return textAcudit.innerHTML = boxNorris.value; });
 }
+//// funció aleatoria
 function random() {
     var number = [0, 1];
     return Math.round(Math.random(number));
 }
+//// funció vots amb (resposta) api aleatoria
 function votacion() {
-    document.getElementById("button-1").hidden = false;
-    document.getElementById("button-2").hidden = false;
-    document.getElementById("button-3").hidden = false;
+    document.getElementById("boto-Agrada").hidden = false;
+    document.getElementById("boto-NiFuNiFa").hidden = false;
+    document.getElementById("boto-NoAgrada").hidden = false;
     fondos();
     if (random() == 0) {
         justJoke();
@@ -66,26 +62,13 @@ function votacion() {
     //justJoke();
     //justJokeNorris();
 }
+//// funció fons colors aleatoris
 function fondos() {
+    //const image = 14;
     var shapes = ['blob-1.svg', 'blob-2.svg', 'blob-3.svg', 'blob-4.svg', 'blob-5.svg', 'blob-6.svg', 'blob-7.svg', 'blob-8.svg', 'blob-9.svg', 'blob-10.svg', 'blob-11.svg', 'blob-12.svg', 'blob-13.svg', 'blob-14.svg'];
     var randomShapes = shapes[Math.floor(Math.random() * shapes.length)];
     document.body.style.backgroundImage = ("url(images/" + (randomShapes) + ")");
 }
-/*
-const image = 5;
-
-$(document).ready(function () {
-  let current = 0;
-  $(".image").on("click", function () {
-    $(".image").css({ 'background-image': `url(${++current % image + 1}.svg)` });
-  });
-});
-/*
-
-
-
-
-
 /*
     //escribir variable en typescript
     let text: string = "texto";
