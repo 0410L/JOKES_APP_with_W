@@ -4,12 +4,22 @@
     margin: auto;
 }
 */
+#temperatura{
+    font-size: 15px;
+    width: 10px;
+}
+
+#icono{
+    width: 10px;
+}
+
 
 *{
     font-size: large;
     box-sizing: 0;
-    overflow: hidden
+    overflow: hidden;
 }
+
 
 body {
     font-family: Arial, Helvetica, sans-serif, 'Arial Narrow Bold', sans-serif;
@@ -213,17 +223,21 @@ font: https://codepen.io/ahse/pen/GpRbEr
 */
 
 
-/*
-@media (max-width: 800px) {
+
+@media (max-width: 640px) {
     *{
         font-size: smaller;
         margin: 0 pix;
   }
   p {
     font-size: small;
+    h1 {
+    font-size: smaller;
+        margin: 0 pix;
+    }
 }
 
-
+/*
 @media (max-width: 635px) {
   h1 {
     font-size: smaller;

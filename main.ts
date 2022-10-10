@@ -3,17 +3,17 @@ const puntuacionChiste = []
 const arxiu = new Date;
 const textAcudit = document.querySelector('.container p');
 const button = document.querySelector('.container button');
-const weatherLog = document.querySelector('.weather h3')
-const celsius = document.querySelector('.weather h4')
+const weatherLog = document.querySelector('#temperatura')
+const celsius = document.querySelector('#icono')
 
 //// generador d'acudits desde API EXTERNA
-//window.stop();
-function justJoke() {
-    fetch('https://icanhazdadjoke.com/', {
+async function justJoke() {
+    const data = await fetch('https://icanhazdadjoke.com/', {
         headers: {'Accept': 'application/json'}
     })
-    .then(data => data.json())
-    .then(box => textAcudit.innerHTML = box.joke)
+    const box = await data.json();
+    textAcudit.innerHTML = box.joke;
+    //window.stop();
 }
 //// marcador de puntuació d'acudits
 function addToList(score){
@@ -25,26 +25,27 @@ function addToList(score){
     console.log(puntuacionChiste)
 }
 //// generador del temps desde API EXTERNA
-function justWeather() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=14f15cb2967f0ebbd8cde2cc84211707', {
+async function justWeather() {
+    const weatherData = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=14f15cb2967f0ebbd8cde2cc84211707&lang=ca&units=metric', {
         headers: {'Accept': 'application/json'}
     })
-    const boxWeather = wheaterData();
-    const temp = boxWeather['weather'].map(weather => weather.icon);
-    var icon = ('http://openweathermap.org/img/wm/' + temp + "@2x.png");
-    weatherLog.innerHTML = ("<img src = " + icon + ">");
-    celsius.innerHTML = boxWeather.main.temp + ("ºC");
+    const weatherBox = await weatherData.json();
+    
+    weatherLog.innerHTML = ("<img src = " + 'http://openweathermap.org/img/wn/' + weatherBox['weather'].map(weather => weather.icon) + "@2x.png" + " >");
+    //alert(weatherLog.innerHTML);
+    celsius.innerHTML = weatherBox.main.temp + (" ºC ");
+    //alert(celsius.innerHTML);
 
 }
 //// generador d'acudits CHUCK NORRIS desde API EXTERNA
-
-function justJokeNorris() {
-    fetch('https://api.chucknorris.io/jokes/random', {
+async function justJokeNorris() {
+    const dataNorris = await fetch('https://api.chucknorris.io/jokes/random', {
         headers: {'Accept': 'application/json'}
     })
-    .then(dataNorris => dataNorris.json())
-    .then(boxNorris => textAcudit.innerHTML = boxNorris.value)
+    const boxNorris = await dataNorris.json();
+    textAcudit.innerHTML = boxNorris.value;
 }
+
 //// funció aleatoria
 function random (){
     var number = [0,1]
@@ -74,6 +75,7 @@ function fondos () {
     document.body.style.backgroundImage=("url(images/"+(randomShapes)+")");
 }
 
+justWeather();
 
 
 
