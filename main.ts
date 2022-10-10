@@ -1,10 +1,10 @@
 //escriure aqui per conversió a js
 const puntuacionChiste = []
 const arxiu = new Date;
-const textAcudit = document.querySelector('.container p');
+const textAcudit = document.querySelector('#textAcudit');
 const button = document.querySelector('.container button');
-const weatherLog = document.querySelector('#temperatura')
-const celsius = document.querySelector('#icono')
+const weatherLog = document.querySelector('#icono')
+const celsius = document.querySelector('#temperatura')
 
 //// generador d'acudits desde API EXTERNA
 async function justJoke() {

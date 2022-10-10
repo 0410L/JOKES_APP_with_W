@@ -37,10 +37,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 //escriure aqui per conversió a js
 var puntuacionChiste = [];
 var arxiu = new Date;
-var textAcudit = document.querySelector('.container p');
+var textAcudit = document.querySelector('#textAcudit');
 var button = document.querySelector('.container button');
-var weatherLog = document.querySelector('#temperatura');
-var celsius = document.querySelector('#icono');
+var weatherLog = document.querySelector('#icono');
+var celsius = document.querySelector('#temperatura');
 //// generador d'acudits desde API EXTERNA
 function justJoke() {
     return __awaiter(this, void 0, void 0, function () {

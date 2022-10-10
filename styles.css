@@ -6,11 +6,13 @@
 */
 #temperatura{
     font-size: 15px;
-    width: 10px;
+    width: auto;
+    margin: 0;
 }
 
 #icono{
-    width: 10px;
+    width: auto;
+    margin: 0;
 }
 
 
@@ -226,15 +228,8 @@ font: https://codepen.io/ahse/pen/GpRbEr
 
 @media (max-width: 640px) {
     *{
-        font-size: smaller;
-        margin: 0 pix;
-  }
-  p {
-    font-size: small;
-    h1 {
-    font-size: smaller;
-        margin: 0 pix;
-    }
+        font-size: small;
+ 
 }
 
 /*
