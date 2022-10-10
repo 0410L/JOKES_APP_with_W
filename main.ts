@@ -15,15 +15,19 @@ async function justJoke() {
     textAcudit.innerHTML = box.joke;
     //window.stop();
 }
+
+
 //// marcador de puntuació d'acudits
 function addToList(score){
     const reportJokes = {}
     reportJokes.joke = textAcudit.innerHTML
     reportJokes.score = score;
-    reportJokes.date = arxiu.toISOString()
+    reportJokes.date = arxiu.toISOString() //llistat
     puntuacionChiste.push(reportJokes)
     console.log(puntuacionChiste)
 }
+
+
 //// generador del temps desde API EXTERNA
 async function justWeather() {
     const weatherData = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=14f15cb2967f0ebbd8cde2cc84211707&lang=ca&units=metric', {
@@ -33,10 +37,12 @@ async function justWeather() {
     
     weatherLog.innerHTML = ("<img src = " + 'http://openweathermap.org/img/wn/' + weatherBox['weather'].map(weather => weather.icon) + "@2x.png" + " >");
     //alert(weatherLog.innerHTML);
-    celsius.innerHTML = weatherBox.main.temp + (" ºC ");
+    celsius.innerHTML = weatherBox.main.temp.toString().split(".")[0] + (" ºC ");
     //alert(celsius.innerHTML);
-
+    //const cambioDosDigits = celsius.split(".")[0];
 }
+
+
 //// generador d'acudits CHUCK NORRIS desde API EXTERNA
 async function justJokeNorris() {
     const dataNorris = await fetch('https://api.chucknorris.io/jokes/random', {

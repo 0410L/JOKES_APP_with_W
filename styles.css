@@ -1,25 +1,27 @@
-/*{
-    text-align: center;
-    justify-items: center;
-    margin: auto;
+#textAcudit{
+    font-style: italic;
+    font-size: 25px;
 }
-*/
+
 #temperatura{
-    font-size: 15px;
-    width: auto;
-    margin: 0;
+    width: 200px;
+    height: 120px;
 }
 
 #icono{
-    width: auto;
-    margin: 0;
+    width: 200px;
+    height: 120px;
 }
 
+h3{
+    font-style: normal;
+}
 
 *{
     font-size: large;
     box-sizing: 0;
     overflow: hidden;
+    font-family: 'Oswald', 'serif'
 }
 
 
@@ -36,15 +38,6 @@ body {
  }
 
 
-/*
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-*/
-
 .btn {
     font-style:italic;
 }
@@ -57,15 +50,6 @@ button {
     color: red;
     background-color: transparent;
 
-}
-
-.button:hover {
-    background-color: rgb(162, 199, 0);
-    transition: 0.3s;
-}
-
-.button:active {
-    background:rgb(255, 0, 0);
 }
 
 .weather {
@@ -106,130 +90,29 @@ p {
 }
 
 
-/*linies de fons*/
-
-
-/*
-#light{
-    position: absolute;
-    top: 150px;
-}
-#lineh1{
-    position: absolute;
-    left: 0;
-    height: 10px;
-    background: #5500AA;
-    animation: lineH 4s 5s infinite linear;
-}
-#lineh2{
-    position: absolute;
-    left: 0;
-    top: 40px;
-    height: 10px;
-    background: #AA2B00;
-    animation: lineH 5s 0.5s infinite linear;
-}
-#lineh3{
-    position: absolute;
-    left: 0;
-    top: 70px;
-    height: 10px;
-    background: #00D4FF;
-    animation: lineH 5s 2s infinite linear;
-}
-#lineh4{
-    position: absolute;
-    right: 0;
-    top: 100px;
-    height: 10px;
-    background: #00AA2B;
-    animation: lineH 5s 1s infinite linear;
-}
-#lineh5{
-    position: absolute;
-    left: 0;
-    top: 130px;
-    height: 10px;
-    background: #AA8000;
-    animation: lineH 5s 4s infinite linear;
-}
-#lineh6{
-    position: absolute;
-    right: 0;
-    top: 160px;
-    height: 10px;
-    background: #AAFF00;
-    animation: lineH 4s 1s infinite linear;
-}
-#lineh7{
-    position: absolute;
-    right: 0;
-    top: 190px;
-    height: 10px;
-    background: #D50055;
-    animation: lineH 4s 0s infinite linear;
-}
-#lineh8{
-    position: absolute;
-    left: 0;
-    top: 220px;
-    height: 10px;
-    background: #00FFFF;
-    animation: lineH 4s 1.5s infinite linear;
-}
-#lineh9{
-    position: absolute;
-    left: 0;
-    top: 250px;
-    height: 10px;
-    background: #2B002B;
-    animation: lineH 5s 2s infinite linear;
-}
-#lineh10{
-    position: absolute;
-    right: 0;
-    top: 280px;
-    height: 10px;
-    background: #005580;
-    animation: lineH 4s 3s infinite linear;
-}
-#lineh11{
-    position: absolute;
-    right: 0;
-    top: 310px;
-    height: 10px;
-    background: #FF557F;
-    animation: lineH 4s 1s infinite linear;
-}
-#lineh12{
-    position: absolute;
-    right: 0;
-    top: 340px;
-    height: 10px;
-    background: #85B085;
-    animation: lineH 6s 1s infinite linear;
-}
-@keyframes lineH{
-    0%{
-        width: 0%;
-    }
-    100%{
-width: 95%;opacity: 0;
-}
-}
-*/
-
-
 /*
 font: https://codepen.io/ahse/pen/GpRbEr
 */
 
 
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     *{
-        font-size: small;
- 
+        font-size: medium;
+    }
+
+    #textAcudit{
+        font-size: 20px;
+    }
+    #temperauta{
+        position: start;
+    }
+    #icono{
+        max-width: 10px !important;
+        height: 50px;
+        display: none;
+    }
+    
 }
 
 /*

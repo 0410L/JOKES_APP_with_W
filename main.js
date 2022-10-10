@@ -66,7 +66,7 @@ function addToList(score) {
     var reportJokes = {};
     reportJokes.joke = textAcudit.innerHTML;
     reportJokes.score = score;
-    reportJokes.date = arxiu.toISOString();
+    reportJokes.date = arxiu.toISOString(); //llistat
     puntuacionChiste.push(reportJokes);
     console.log(puntuacionChiste);
 }
@@ -86,7 +86,7 @@ function justWeather() {
                     weatherBox = _a.sent();
                     weatherLog.innerHTML = ("<img src = " + 'http://openweathermap.org/img/wn/' + weatherBox['weather'].map(function (weather) { return weather.icon; }) + "@2x.png" + " >");
                     //alert(weatherLog.innerHTML);
-                    celsius.innerHTML = weatherBox.main.temp + (" ºC ");
+                    celsius.innerHTML = weatherBox.main.temp.toString().split(".")[0] + (" ºC ");
                     return [2 /*return*/];
             }
         });

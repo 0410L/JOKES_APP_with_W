@@ -10,13 +10,14 @@
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
           <script src="https://kit.fontawesome.com/5132602d67.js" crossorigin="anonymous"></script>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body>
       <!--⛅22º-->
         <div class="weather fs-5" style="position: absolute; overflow:hidden">
-          <span id="icono"></span>
-          <span id="temperatura"></span>
+          <span id="icono" style="height:100vh"></span>
+          <span id="temperatura" ></span>
         </div>
             <style>
               body {
@@ -25,7 +26,7 @@
                 background-repeat:no-repeat;
                 background-size:100% 100%;
               }
-              </style>
+            </style>
         <div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh; overflow:hidden">
           <!-- Inner row, half the width and height, centered, blue border -->
           <div class="row text-center d-flex align-items-center" style="overflow:hidden; width:100vw">
@@ -34,10 +35,10 @@
                   <h3>🤣 Preparat per riure? 🤣​</h3><br>
                     <span id="textAcudit"></span>
                     <div class="score"><br>
-                      <button type="button" id="boto-Agrada" onclick="addToList(1),votacion()" hidden><i class="btn btn-success btn-lg fa-solid fa-heart fa-beat bd-highlight m-1" style="--fa-animation-duration: 0.5s;" aria-hidden="true"></i></button>
-                      <button type="button" id="boto-NiFuNiFa" onclick="addToList(2),votacion()" hidden><i class="btn btn-warning btn-lg fa-solid fa-heart-circle-exclamation fa-beat m-1" aria-hidden="true"></i></button>
-                      <button type="button" id="boto-NoAgrada" onclick="addToList(3),votacion()" hidden><i class="btn btn-danger btn-lg fa-solid fa-heart-crack fa-beat m-1" style="--fa-animation-duration: 2s;" aria-hidden="true"></i></button>
-                    </div><br>  
+                      <button type="button" id="boto-Agrada" onclick="addToList(1),votacion()" hidden><i class="btn btn-success btn-lg fa-solid fa-regular fa-face-smile fa-beat bd-highlight m-1" style="--fa-animation-duration: 0.5s;" aria-hidden="true"></i></button>
+                      <button type="button" id="boto-NiFuNiFa" onclick="addToList(2),votacion()" hidden><i class="btn btn-warning btn-lg fa-solid fa-face-meh fa-beat m-1" aria-hidden="true"></i></button>
+                      <button type="button" id="boto-NoAgrada" onclick="addToList(3),votacion()" hidden><i class="btn btn-danger btn-lg fa-solid fa-face-frown fa-beat m-1" style="--fa-animation-duration: 2s;" aria-hidden="true"></i></button>
+                    </div>
                 <button id="SeguentAcudit" class= "btn btn-primary mb-1" onclick="votacion()">Següent acudit</button>
               </div> 
             </section>
