@@ -77,7 +77,7 @@ function votacion(){
 function fondos () {
     //const image = 14;
     let shapes = ['blob-1.svg','blob-2.svg','blob-3.svg','blob-4.svg','blob-5.svg','blob-6.svg','blob-7.svg','blob-8.svg','blob-9.svg','blob-10.svg','blob-11.svg','blob-12.svg','blob-13.svg','blob-14.svg']
-    let randomShapes = shapes[Math.floor(Math.random()*shapes.length)]
+    let randomShapes = shapes[Math.floor(Math.random()*shapes.length)];
     document.body.style.backgroundImage=("url(images/"+(randomShapes)+")");
 }
 
